@@ -1,0 +1,151 @@
+.complects {
+  .section-title {
+    width: 100%;
+    max-width: 107.2rem;
+  }
+}
+
+.complects__subtitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+
+  margin-bottom: 5rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+  }
+}
+
+.complects-slider {
+  margin-bottom: 3rem;
+}
+
+.complects-slider__navs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.complects-slider__item {
+  width: 100%;
+  max-width: 150rem;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: stretch;
+  gap: 5rem;
+
+  padding-right: 8rem;
+  border-right: 1px solid $primary;
+
+  @include breakpoint($lg-bp) {
+    padding-right: 0;
+
+    border-right: none;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &:last-child {
+    max-width: 150rem;
+
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0 !important;
+  }
+}
+.cs-item__img {
+  width: 100%;
+  max-width: 49rem;
+  align-self: flex-start;
+  @include breakpoint($sm-bp) {
+    height: 20.3rem;
+    object-fit: cover;
+  }
+}
+
+.cs-item__content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
+}
+
+.cs-item__name {
+  font-size: 2.4rem;
+  font-weight: 600;
+
+  margin-bottom: 2rem;
+}
+
+.cs-item__descr {
+  margin-bottom: auto;
+
+  font-size: 2rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  li + li {
+    margin-top: 3rem;
+
+    @include breakpoint($sm-bp) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  ul {
+    list-style: inside disc;
+  }
+  ol {
+    list-style: inside decimal;
+  }
+}
+.cs-item__price {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: $primary;
+
+  margin-bottom: 3rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+
+    margin-bottom: 1.5rem;
+  }
+}
+.cs-item__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.cs-item__btn {
+  width: 100%;
+  max-width: 100%;
+  height: unset;
+
+  padding: 2rem;
+
+  @include breakpoint($lg-bp) {
+    padding: 2rem 1rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 1.5rem 0.5rem;
+  }
+}

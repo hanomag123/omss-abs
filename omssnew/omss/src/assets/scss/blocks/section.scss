@@ -1,0 +1,29 @@
+.section {
+  padding: 10rem 0;
+
+  @include breakpoint($lg-bp) {
+    padding: 7rem 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 100%;
+  color: $primary;
+
+  margin-bottom: 5rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 4rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 3rem;
+
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,77 @@
+.order.section {
+  @include breakpoint($sm-bp) {
+    padding-bottom: 0;
+  }
+}
+
+.order__inner {
+  display: flex;
+  align-items: center;
+  gap: 21.5rem;
+
+  @include breakpoint($xl-bp) {
+    gap: 5rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 4rem;
+  }
+}
+
+.order__img {
+  width: 100%;
+  max-width: 96rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: 72rem;
+  }
+  @include breakpoint($lg-bp) {
+    max-width: unset;
+  }
+}
+
+.order__content {
+  width: 100%;
+  max-width: 54.5rem;
+
+  @include breakpoint($lg-bp) {
+    padding: 0 2rem;
+  }
+}
+
+.order-label + .order-label {
+  margin-top: 3rem;
+}
+
+.order-form {
+  width: 100%;
+  max-width: 46.6rem;
+
+  margin: 0 auto;
+
+  @include breakpoint($lg-bp) {
+    margin: 0;
+  }
+}
+
+.order__checkbox {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+
+  @include breakpoint($sm-bp) {
+    margin-bottom: 3rem;
+
+    & label {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.order__btn {
+  max-width: 100%;
+}

@@ -1,0 +1,43 @@
+<div class="modal modal-order hide" data-modalName="modal-order">
+    <div class="modal__inner" data-scroll-lock-scrollable>
+        <span class="modal-close-btn" data-close>
+            <svg>
+                <use href="#cross"></use>
+            </svg>
+        </span>
+        <div class="order__content">
+            <h2 class="section-title">Оставить заявку</h2>
+            <form class="order-form" action="#">
+                <div class="order-label">
+                    <div class="form-input__wrapper">
+                        <input class="form-input" id="modal-input-name" name="name" type="text" required>
+                        <label for="modal-input-name">Имя</label>
+                    </div>
+                </div>
+                <div class="order-label">
+                    <div class="form-input__wrapper">
+                        <input class="form-input" id="modal-input-tel" name="tel" type="tel" required>
+                        <label for="modal-input-tel">Телефон</label>
+                    </div>
+                </div>
+                <div class="order-label">
+                    <div class="form-input__wrapper">
+                        <input class="form-input" id="modal-input-email" name="email" type="email" required>
+                        <label for="modal-input-email">E-mail</label>
+                    </div>
+                </div>
+                <div class="order-label">
+                    <div class="form-input__wrapper">
+                        <input class="form-input" id="textarea" type="text" name="comment">
+                        <label for="modal-input-email">Комментарий</label>
+                    </div>
+                </div>
+                <div class="order__checkbox">
+                    <input class="custom-checkbox" type="checkbox" required id="modal-order-privacy">
+                    <label for="modal-order-privacy">Согласен на обработку персональных данных</label>
+                </div>
+                <button class="order__btn hollow-btn" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>

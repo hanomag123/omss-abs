@@ -1,0 +1,122 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1050;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: rgba(55, 65, 71, 0.6);
+}
+
+.modal__inner {
+  position: relative;
+  overflow-y: auto;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 111;
+  transform: translate3d(-50%, -50%, 0);
+
+  padding: 10rem;
+
+  background: white;
+
+  @include breakpoint($lg-bp) {
+    width: 100%;
+    max-width: 55rem;
+
+    padding: 5rem 3rem;
+  }
+  @include breakpoint($sm-bp) {
+    max-width: 33.5rem;
+
+    padding: 4rem 2rem;
+
+    .order__content {
+      padding: 0;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .order__content {
+    max-width: unset;
+  }
+}
+
+.modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  z-index: 1;
+
+  width: 3.8rem;
+  height: 3.8rem;
+
+  cursor: pointer;
+
+  transition: all 0.1s linear;
+
+  @include breakpoint($sm-bp) {
+    top: 2rem;
+    right: 2rem;
+
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  svg {
+    width: 3.2rem;
+    height: 3.2rem;
+
+    stroke: #00020e;
+
+    @include breakpoint($sm-bp) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &:hover {
+    svg {
+      stroke-width: 2px;
+      stroke: $primary;
+    }
+  }
+}
+
+.modal-privacy__content {
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+.modal-heading {
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+
+  margin-bottom: 2.2rem;
+
+  @include breakpoint($lg-bp) {
+    max-width: 62.9rem;
+  }
+  @include breakpoint($sm-bp) {
+    max-width: 28.8rem;
+
+    font-size: 2.4rem;
+  }
+}
+
+.thx-descr {
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+.hollow-btn {
+  width: 100%;
+  max-width: max-content;
+  height: 6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $primary;
+
+  padding: 2rem 4rem;
+
+  background-color: transparent;
+  border: 1px solid $primary;
+
+  transition: all 0.2s ease;
+
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+    height: 4.9rem;
+
+    padding: 1.5rem;
+  }
+
+  &:hover {
+    color: white;
+
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  &[disabled] {
+    color: $gray;
+
+    border-color: $gray;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}

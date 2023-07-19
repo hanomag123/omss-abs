@@ -1,0 +1,131 @@
+.about__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15rem;
+
+  margin-bottom: 15rem;
+
+  @include breakpoint($lg-bp) {
+    flex-direction: column;
+    gap: 5rem;
+
+    margin-bottom: 8rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 1.5rem;
+
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    margin-bottom: 0;
+  }
+}
+
+.about-subtitle {
+  width: 100%;
+  max-width: 70rem;
+
+  margin-top: 2rem;
+
+  @include breakpoint($lg-bp) {
+    margin-top: 0;
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+.about__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 7.5rem;
+
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+  }
+}
+
+.about__descr {
+  width: 100%;
+  max-width: 58.5rem;
+
+  font-size: 3.4rem;
+  font-weight: 700;
+
+  @include breakpoint($xl-bp) {
+    max-width: unset;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
+}
+
+.about-slider {
+  overflow: hidden;
+}
+
+.about-slider__navs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 3rem;
+
+  @include breakpoint($sm-bp) {
+    max-width: 33.5rem;
+  }
+}
+
+.about-slider__item {
+  width: 100%;
+  max-width: 54rem;
+  height: auto;
+  box-sizing: border-box;
+
+  padding: 2rem;
+  background: $secondary;
+
+  @include breakpoint($sm-bp) {
+    max-width: 33.5rem;
+
+    padding: 2rem 1rem;
+  }
+}
+
+.about-slider__item-title {
+  position: relative;
+
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: $primary;
+
+  padding-bottom: 0.9rem;
+  margin-bottom: 5rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+
+    margin-bottom: 3rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    width: 3rem;
+    height: 1px;
+
+    background: $primary;
+  }
+}

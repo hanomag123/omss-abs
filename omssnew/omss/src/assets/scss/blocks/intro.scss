@@ -1,0 +1,92 @@
+.intro {
+  min-height: 91.3rem;
+
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 134.9rem;
+
+  @include breakpoint($xl-bp) {
+    background-size: 90rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    min-height: 71rem;
+
+    background-size: 57rem;
+  }
+  @include breakpoint($sm-bp) {
+    min-height: 73.5rem;
+
+    margin-bottom: 5rem;
+
+    background-size: 100%;
+  }
+}
+.intro__inner {
+  width: 100%;
+  max-width: 106rem;
+
+  padding-top: 6.4rem;
+
+  @include breakpoint($lg-bp) {
+    padding-top: 0;
+  }
+}
+.intro__title {
+  font-weight: 700;
+  font-size: 5rem;
+  color: $primary;
+
+  margin-bottom: 6rem;
+
+  @include breakpoint($lg-bp) {
+    font-size: 4.6rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.intro__subtitle {
+  position: relative;
+
+  width: 100%;
+  max-width: 87rem;
+
+  font-size: 2rem;
+
+  padding-left: 27rem;
+  margin-bottom: 10rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+
+    padding-left: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 24.5rem;
+    height: 1px;
+
+    background: $primary;
+
+    @include breakpoint($sm-bp) {
+      width: 4rem;
+    }
+  }
+}
+.intro__price-btn {
+  width: 100%;
+  max-width: 30rem;
+
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
+}

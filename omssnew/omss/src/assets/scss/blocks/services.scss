@@ -1,0 +1,253 @@
+.services__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+  }
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+
+  background: $secondary;
+}
+
+.services-item__content {
+  display: flex;
+  flex-direction: column;
+
+  height: -webkit-fill-available;
+
+  padding: 3rem 2rem;
+
+  @include breakpoint($sm-bp) {
+    height: 100%;
+
+    padding: 2rem 1rem;
+  }
+}
+
+.services-item__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+
+  margin-bottom: 2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+  }
+}
+
+.services-item__descr {
+  margin-bottom: 2.5rem;
+}
+
+.services-item__price {
+  position: relative;
+
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: $primary;
+
+  margin-top: auto;
+  padding-left: 5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    width: 3rem;
+    height: 1px;
+
+    background: $primary;
+  }
+}
+
+.services-item--security {
+  width: 100%;
+  max-width: 51.5rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: 57.5rem;
+  }
+
+  img {
+    width: 100%;
+    height: 19.6rem;
+
+    object-fit: cover;
+
+    @include breakpoint($sm-bp) {
+      min-height: 16.1rem;
+      max-height: 16.1rem;
+    }
+  }
+}
+
+.services-item--security-alarm {
+  width: 100%;
+  max-width: 51.5rem;
+
+  img {
+    width: 100%;
+    height: 29rem;
+
+    object-fit: cover;
+
+    @include breakpoint($sm-bp) {
+      min-height: 16.1rem;
+      max-height: 16.1rem;
+    }
+  }
+
+  @include breakpoint($xl-bp) {
+    max-width: 70.5rem;
+  }
+}
+
+.services-item--firefight {
+  width: 100%;
+  max-width: 65rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  @include breakpoint($xl-bp) {
+    max-width: 62rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    flex-direction: column-reverse !important;
+  }
+
+  img {
+    width: 100%;
+    max-width: 33rem;
+    height: 100%;
+
+    object-fit: cover;
+
+    @include breakpoint($sm-bp) {
+      max-width: 100%;
+      min-height: 16.1rem;
+      max-height: 16.1rem;
+    }
+  }
+}
+
+.services-item--firefight-alarm {
+  width: 100%;
+  max-width: 66rem;
+
+  img {
+    width: 100%;
+    height: 29rem;
+
+    object-fit: cover;
+
+    @include breakpoint($sm-bp) {
+      min-height: 16.1rem;
+      max-height: 16.1rem;
+    }
+  }
+
+  .services-item__title {
+    margin-bottom: 4rem;
+
+    @include breakpoint($sm-bp) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .services-item__descr {
+    display: grid;
+    gap: 2.7rem;
+
+    @include breakpoint($sm-bp) {
+      gap: 1.5rem;
+    }
+  }
+
+  .services-item__descr-item:not(:last-child) {
+    padding-bottom: 2.7rem;
+    border-bottom: 1px solid $primary;
+
+    @include breakpoint($sm-bp) {
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+.services-item--sov {
+  width: 100%;
+  max-width: 51.5rem;
+
+  @include breakpoint($xl-bp) {
+    max-width: 55.5rem;
+  }
+
+  img {
+    width: 100%;
+    height: 29rem;
+
+    object-fit: cover;
+
+    @include breakpoint($sm-bp) {
+      min-height: 16.1rem;
+      max-height: 16.1rem;
+    }
+  }
+}
+
+.services-item--order {
+  width: 100%;
+  max-width: 51.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding-right: 6.6rem;
+
+  background: none;
+
+  @include breakpoint($xl-bp) {
+    max-width: 61.5rem;
+  }
+
+  @include breakpoint($lg-bp) {
+    align-items: center;
+
+    padding-right: 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    min-height: 4.9rem !important;
+
+    margin-top: 1rem;
+  }
+
+  button {
+    max-width: 33.5rem;
+  }
+}
+
+.services-item {
+  @include breakpoint($lg-bp) {
+    max-width: 100%;
+  }
+  @include breakpoint($sm-bp) {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 35.7rem;
+  }
+}
